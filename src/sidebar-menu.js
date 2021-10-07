@@ -15,8 +15,12 @@ const SidebarMenu = ({currentSection, sidebar, currentFile, onSectionSelect, get
     const {names, loading} = state;
 
     useEffect(() => {
-            getNameArr();
-            collapse();
+        getNameArr();
+        collapse();
+    }, [])
+
+    useEffect(() => {
+        collapse();
     }, [currentSection, currentFile])
 
 
